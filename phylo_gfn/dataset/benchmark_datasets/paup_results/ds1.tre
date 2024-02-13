@@ -1,0 +1,65 @@
+#NEXUS 
+
+Begin trees;  [Treefile saved Thu Mar 16 09:48:21 2023]
+[!
+>Data file = ds1.nex
+>Heuristic search settings:
+>  Optimality criterion = parsimony
+>    Character-status summary:
+>      Of 1949 total characters:
+>        All characters are of type 'unord'
+>        All characters have equal weight
+>        544 characters are constant (proportion = 0.279117)
+>        324 variable characters are parsimony-uninformative
+>        Number of parsimony-informative characters = 1081
+>    Gaps are treated as "fifth base"
+>  Starting tree(s) obtained via stepwise addition
+>    Addition sequence: random
+>    Number of replicates = 10
+>    Starting seed = generated automatically
+>    Number of trees held at each step = 10
+>  Branch-swapping algorithm: tree-bisection-reconnection (TBR) with reconnection limit = 8
+>    Steepest descent option not in effect
+>  Initial 'Maxtrees' setting = 100
+>  Branches collapsed (creating polytomies) if maximum branch length is zero
+>  'MulTrees' option in effect
+>  No topological constraints in effect
+>  Trees are unrooted
+>
+>Heuristic search completed
+>  Total number of rearrangements tried = 105319
+>  Score of best tree(s) found = 4026
+>  Number of trees retained = 1
+>  Time used = 0.11 sec (CPU time = 0.09 sec)
+]
+	Translate
+		1 taxon0,
+		2 taxon1,
+		3 taxon2,
+		4 taxon3,
+		5 taxon4,
+		6 taxon5,
+		7 taxon6,
+		8 taxon7,
+		9 taxon8,
+		10 taxon9,
+		11 taxon10,
+		12 taxon11,
+		13 taxon12,
+		14 taxon13,
+		15 taxon14,
+		16 taxon15,
+		17 taxon16,
+		18 taxon17,
+		19 taxon18,
+		20 taxon19,
+		21 taxon20,
+		22 taxon21,
+		23 taxon22,
+		24 taxon23,
+		25 taxon24,
+		26 taxon25,
+		27 taxon26
+		;
+tree 'PAUP_1' = [&U] (1,(((((2,((((3,(5,13)),19),((((6,17),21),8),(9,14))),23)),12),24),10),((4,((((11,(16,20)),18),27),15)),25)),((7,22),26));
+End;

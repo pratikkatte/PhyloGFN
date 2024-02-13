@@ -1,0 +1,83 @@
+#NEXUS 
+
+Begin trees;  [Treefile saved Wed Mar 15 19:19:57 2023]
+[!
+>Data file = ds4.nex
+>Heuristic search settings:
+>  Optimality criterion = parsimony
+>    Character-status summary:
+>      Of 1137 total characters:
+>        All characters are of type 'unord'
+>        All characters have equal weight
+>        438 characters are constant (proportion = 0.385224)
+>        226 variable characters are parsimony-uninformative
+>        Number of parsimony-informative characters = 473
+>    Gaps are treated as "fifth base"
+>    Multistate taxa interpreted as uncertainty
+>  Starting tree(s) obtained via stepwise addition
+>    Addition sequence: random
+>    Number of replicates = 10
+>    Starting seed = generated automatically
+>    Number of trees held at each step = 10
+>  Branch-swapping algorithm: tree-bisection-reconnection (TBR) with reconnection limit = 8
+>    Steepest descent option not in effect
+>  Initial 'Maxtrees' setting = 100
+>  Branches collapsed (creating polytomies) if maximum branch length is zero
+>  'MulTrees' option in effect
+>  No topological constraints in effect
+>  Trees are unrooted
+>
+>Heuristic search completed
+>  Total number of rearrangements tried = 422458
+>  Score of best tree(s) found = 2424
+>  Number of trees retained = 4
+>  Time used = 0.31 sec (CPU time = 0.30 sec)
+]
+	Translate
+		1 taxon0,
+		2 taxon1,
+		3 taxon2,
+		4 taxon3,
+		5 taxon4,
+		6 taxon5,
+		7 taxon6,
+		8 taxon7,
+		9 taxon8,
+		10 taxon9,
+		11 taxon10,
+		12 taxon11,
+		13 taxon12,
+		14 taxon13,
+		15 taxon14,
+		16 taxon15,
+		17 taxon16,
+		18 taxon17,
+		19 taxon18,
+		20 taxon19,
+		21 taxon20,
+		22 taxon21,
+		23 taxon22,
+		24 taxon23,
+		25 taxon24,
+		26 taxon25,
+		27 taxon26,
+		28 taxon27,
+		29 taxon28,
+		30 taxon29,
+		31 taxon30,
+		32 taxon31,
+		33 taxon32,
+		34 taxon33,
+		35 taxon34,
+		36 taxon35,
+		37 taxon36,
+		38 taxon37,
+		39 taxon38,
+		40 taxon39,
+		41 taxon40
+		;
+tree 'PAUP_1' = [&U] (1,((((((((2,23),((((14,36),17),(31,32)),41)),(6,33)),9),((7,13),((10,22),37))),(((((3,35),(19,20)),(21,29)),(((18,(27,28)),26),40)),((15,16),39))),(((5,34),((8,25),(12,24))),(30,38))),11),4);
+tree 'PAUP_2' = [&U] (1,(((((((2,23),((((14,36),17),(31,32)),41)),((6,33),9)),((7,13),((10,22),37))),(((((3,35),(19,20)),(21,29)),(((18,(27,28)),26),40)),((15,16),39))),(((5,34),((8,25),(12,24))),(30,38))),11),4);
+tree 'PAUP_3' = [&U] (1,(((((((2,23),((((14,36),17),(31,32)),41)),((6,33),(9,(10,(22,37))))),(7,13)),(((((((3,35),(19,20)),(21,29)),26),(18,(27,28))),40),((15,16),39))),((((5,34),(8,25)),(12,24)),(30,38))),11),4);
+tree 'PAUP_4' = [&U] (1,(((((((2,23),((((14,36),17),(31,32)),41)),((6,33),(9,(10,(22,37))))),(7,13)),(((((3,35),(19,20)),(21,29)),(((18,(27,28)),26),40)),((15,16),39))),((((5,34),(8,25)),(12,24)),(30,38))),11),4);
+End;

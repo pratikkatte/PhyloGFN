@@ -1,0 +1,186 @@
+AMP: true
+ENV:
+  ENVIRONMENT_TYPE: ONE_STEP_BINARY_TREE
+  EVOLUTION_MODEL:
+    COMPUTE_PRIOR: true
+    PRIOR_LAMBDA: 10.0
+    SEQUENCE_LENGTH: 2520
+    VOCAB_SIZE: 4
+  REWARD:
+    C: 33000.0
+    EXP_MAX: 8.0e+307
+    EXP_MIN: 5.0e-324
+    POWER: 1.0
+    RESHAPE_METHOD: EXPONENTIAL
+    SCALE: 16.0
+  SEQUENCE_TYPE: DNA_WITH_GAP
+GFN:
+  BACKWARD_MODELING: UNIFORM
+  CONDITION_ON_SCALE: false
+  LIKELIHOOD_FLOAT16: false
+  LOSS_TYPE: TB
+  MODEL:
+    ARCH: TRANSFORMER
+    EDGES_MODELING:
+      CATEGORICAL:
+        BINS: 50
+        BIN_SIZE: 0.004
+        HEAD:
+          ACT_FN: RELU
+          DROPOUT: 0.0
+          HIDDEN_SIZE: 256
+          INPUT_SIZE: 384
+          LAYERS: 3
+          OUTPUT_SIZE: 2500
+        ROOT_EDGE_HEAD:
+          ACT_FN: RELU
+          DROPOUT: 0.0
+          HIDDEN_SIZE: 256
+          INPUT_SIZE: 384
+          LAYERS: 3
+          OUTPUT_SIZE: 50
+      DISTRIBUTION: CATEGORICAL
+    EVALUATION:
+      BATCH_SIZE: 32
+      BINS_NUM: 10
+      EVALUATION_FREQ: 20
+      FIXED_STATES: true
+      MAX_DUPLICATE_MUTATIONS: 5
+      MUTATIONS_TRAJS: 1000
+      NUM_WORKERS: 16
+      PIN_MEMORY: true
+      PROB_ESTIMATION_METHOD: IMPORTANCE_SAMPLING
+      SAME_TREE_STRUCTURE: false
+      STATES_GENERATION_METHOD: UNIFORM_BINS
+      STATES_NUM: 100
+      TRAJECTORIES_PER_STATES: 100
+    GRAD_CLIP: 10
+    L2_REG: 0
+    LOSS_FN: MSE
+    LR_MODEL: 5.0e-05
+    LR_SCHEDULER:
+      COSINE:
+        LR_MAX:
+        - 0.0005
+        - 0.05
+        LR_MIN:
+        - 5.0e-05
+        - 0.005
+        T_MAX: 10
+      COSINE_WITH_RESTART:
+        CYCLE_MULTI: 1.0
+        LR_MAX:
+        - 0.0005
+        - 0.05
+        LR_MIN:
+        - 5.0e-05
+        - 0.005
+        T0: 10
+      LINEAR:
+        END_FACTOR: 0.1
+        START_FACTOR: 1.0
+        T: 30
+      TYPE: COSINE_WITH_RESTART
+    LR_Z: 0.005
+    SCALE_MLP:
+      ACT_FN: ELU
+      DROPOUT: 0.0
+      HIDDEN_SIZE: 256
+      INPUT_SIZE: 1
+      LAYERS: 3
+      OUTPUT_SIZE: 128
+    SEQ_LEN: fixed_seqlen
+    SUBTB_LAMBDA: 0.9
+    TARGET_NET_UPDATE_FREQ: 200
+    TRANSFORMER:
+      ATTN_DROP_RATE: 0.0
+      DEPTH: 6
+      DROP_RATE: 0.0
+      FLOW_HEAD:
+        ACT_FN: ELU
+        DROPOUT: 0.0
+        HIDDEN_SIZE: 256
+        INPUT_SIZE: 128
+        LAYERS: 3
+        OUTPUT_SIZE: 1
+      LOGITS_HEAD:
+        ACT_FN: ELU
+        CONCATENATE_SUMMARY_TOKEN: true
+        DROPOUT: 0.0
+        HIDDEN_SIZE: 256
+        INPUT_SIZE: 256
+        LAYERS: 3
+        OUTPUT_SIZE: 1
+      MLP_RATIO: 2
+      NUM_HEADS: 4
+      PART1_HEAD:
+        ACT_FN: RELU
+        CONCATENATE_SUMMARY_TOKEN: true
+        DROPOUT: 0.0
+        HIDDEN_SIZE: 256
+        INPUT_SIZE: 256
+        LAYERS: 3
+        OUTPUT_SIZE: 1
+      PART2_HEAD:
+        ACT_FN: RELU
+        CONCATENATE_CANDIDATE_TREE: true
+        DROPOUT: 0.0
+        HIDDEN_SIZE: 256
+        INPUT_SIZE: 256
+        LAYERS: 3
+        OUTPUT_SIZE: 1
+      SEQ_EMB:
+        ACT_FN: RELU
+        DROPOUT: 0.0
+        HIDDEN_SIZE: 256
+        INPUT_SIZE: 10080
+        LAYERS: 0
+        OUTPUT_SIZE: 128
+      SHARED_ENCODER: true
+      USE_TREE_TYPE_EMBEDDING: false
+    USE_LR_SCHEDULER: false
+    USE_TARGET_NET: false
+    Z_MLP:
+      ACT_FN: ELU
+      DROPOUT: 0.0
+      HIDDEN_SIZE: 128
+      INPUT_SIZE: 128
+      LAYERS: 1
+      OUTPUT_SIZE: 1
+    Z_PARTITION_INIT: 5
+  NORMALIZE_LIKELIHOOD: true
+  SCALES_SAMPLING_MU: 2.0
+  SCALES_SAMPLING_SIGMA: 0.5
+  SCALES_SET:
+  - 4.0
+  - 2.0
+  - 1.0
+  - 0.5
+  - 0.25
+  TRAINING_DATA_LOADER:
+    BEST_STATE_BATCH_SIZE: 32
+    BEST_TREES_BUFFER_SIZE: 1000
+    EPOCHS_NUM: 500
+    EPS_ANNEALING: true
+    EPS_ANNEALING_DATA:
+      END_EPS: 0.001
+      NON_EPS_TRAJS: 0
+      RESTART: false
+      START_EPS: 0.5
+      T: 240
+    FIXED_SHAPE_TREES_PATH: ''
+    FREQ_UPDATE_MODEL_WEIGHTS: 5
+    GFN_BATCH_SIZE: 32
+    GFN_FIXED_SHAPE_BATCH_SIZE: 0
+    MINI_BATCH_SPLITS: 2
+    NUM_WORKERS: 20
+    PERTURB_BUFFERED_TREE: false
+    PIN_MEMORY: true
+    RANDOM_ACTION_PROB: 0.001
+    RANDOM_BATCH_SIZE: 0
+    STEPS_PER_EPOCH: 1000
+LOGGING:
+  ENABLE_TENSORBOARD: true
+  TB_DIR: ''
+  TB_NAME: tb_logs
+PARSIMONY_PROBLEM: false
